@@ -1,0 +1,20 @@
+module.exports = {
+	'likes': '{ likes, number} me gusta',
+    'logout': 'Cerrar Sesión',
+    'english': 'Ingles',
+    'spanish': 'Español',
+    'signup.subheading': 'Regístrate para ver las fotos de tus amigos',
+    'signup.facebook': 'Inicia sesión mediante Facebook',
+   'signup.text': 'Iniciar Sesión',
+   'email': 'Çorre Electrónico',
+   'username': 'Nombre de Usuario',
+   'fullname': 'Nombre Completo',
+   'password': 'Contraseña',
+   'signup.call-to-action': 'Registrar',
+   'signup.have-account': '¿Ya tienes una cuenta?',
+   'signin': 'Ingresar',
+   'signin.not-have-account': '¿No tienes una cuenta?',
+   'language': 'Idioma',
+   'upload-picture': 'Subir Foto'	,
+   'upload':'Subir'
+}
