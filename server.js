@@ -1,18 +1,22 @@
 var express = require('express');
-var app = express();
 var multer  = require('multer');
 var ext = require('file-extension');
-
 var aws = require('aws-sdk');
-
 var multerS3 = require('multer-s3');
-
 var config = require('./config');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var expressSession = require('express-session');
+var port = process.env.PORT || 3000;
+var passport = require('passport');
+var platzigram = require('platzigram-client');
+
+var client = platzigram.createClient(config.client);
 
 var s3 = new aws.S3({
 	accessKeyId: config.aws.accessKey,
 	secretAccessKey: config.aws.secretAccessKey,
-})
+});
 
 var storage = multerS3({
 				s3:s3,
@@ -22,13 +26,23 @@ var storage = multerS3({
 					cb(null,{fieldName:file.fieldname})
 				},
 				key:function(req,file,cb){
-					 cb(null, +Date.now()+'.'+ext(file.originalname)); 
+					 cb(null, +Date.now()+'.'+ext(file.originalname));
 				}
 })
 
-
-
 var upload = multer({ storage: storage }).single('picture'); /*picture is the input file name that came from client's form*/
+
+var app = express();
+app.set(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(cookieParser());
+app.use(expressSession({
+	secret: config.secret,
+	resave: false,
+	saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session())
 
 app.set('view engine','pug');
 
@@ -44,15 +58,21 @@ app.get('/signup', function(req,res){
 	//res.send('hola mundo');
 });
 
+app.post('/signup', function(req,res){
+  var user = req.body;
+  client.saveUser(user, function (err,usr){
+	  if (err) return res.status(500).send(err.message);
+
+	  res.redirect('/signin');
+  })
+});
+
 app.get('/signin', function(req,res){
 	res.render('index',{ 'title':'PlatziGram - Inicia Sesión' });
 	//res.send('hola mundo');
 });
 
-
 app.get('/api/pictures',function(req, res){
-
-	
 	var pictures = [
 		{
 			user:{
@@ -72,15 +92,15 @@ app.get('/api/pictures',function(req, res){
 			url:'office.jpg',
 			likes:2,
 			liked:false,
-			createdAt: new Date().setDate(new Date().getDate()-10)	
-		}		
+			createdAt: new Date().setDate(new Date().getDate()-10)
+		}
 	];
 
 setTimeout(function (){
 	res.send(pictures);
 },2000);
 
-	
+
 
 });
 
@@ -95,7 +115,7 @@ app.post('/api/pictures',function (req,res){
 					});
 });
 
-app.get('/api/user/:username', function(req,res){	
+app.get('/api/user/:username', function(req,res){
 	const user =
 	 {
 	 	username: req.params.username,
@@ -104,7 +124,7 @@ app.get('/api/user/:username', function(req,res){
 				 	{
 						id:	1,
 						src: 'https://scontent.fbaq1-1.fna.fbcdn.net/v/t1.0-9/17523240_1364091930326001_7067621866624922243_n.png?oh=24a478a46103c1bf9beaf098ce3d977e&oe=5960A252',
-						likes:	3 		
+						likes:	3
 				 	},
 				 	{
 				 		id:2,
@@ -115,7 +135,7 @@ app.get('/api/user/:username', function(req,res){
 				 		id:3,
 				 		src: 'https://scontent.fbaq1-1.fna.fbcdn.net/v/t1.0-9/16865165_1336190849782776_7602146400375590186_n.jpg?oh=e4f888b88d116bcd2ff742c8dbcfbad5&oe=5958E858',
 				 		likes:0
-				 	}				 	
+				 	}
 	 	]
 	 };
 	 res.send(user);
@@ -131,8 +151,8 @@ app.get('/:username/:id',function (req,res)
 	res.render('index',{title:`PlatziGram - ${req.params.username}`});
 });
 
-app.listen(3000,function(err){
+app.listen(port,function(err){
 	if (err)	return console.log("hubo un error"), process.exit(1);
 
-	console.log("PlatziGram Escuchando en el puerto 3000");
+	console.log("PlatziGram Escuchando en el puerto "+port);
 });

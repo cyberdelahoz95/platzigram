@@ -6,7 +6,7 @@ var signupform = yo`<div class="col s12 m7">
 						<div class="row">
 							<div class="signup-box">
 								<h1 class="platzigram">PlatziGram</h1>
-								<form class="signup-form">
+								<form class="signup-form" action="/signup" method="POST">
 									<h2>${translate.message('signup.subheading')}</h2>
 									<div class="section">
 										<a class="btn btn-fb hiden-on-small-only">${translate.message('signup.facebook')}</a>
@@ -20,7 +20,7 @@ var signupform = yo`<div class="col s12 m7">
 										<input type="password" name="password" placeholder="${translate.message('password')}" />
 										<button class="btn waves-effect waves-light btn-signup" type="submit">${translate.message('signup.call-to-action')}</button>
 									</div>
-								</form>													
+								</form>
 							</div>
 						</div>
 						<div class="row">
