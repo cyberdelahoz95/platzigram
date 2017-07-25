@@ -1,4 +1,4 @@
 no hace falta añadir "start" : "node server.js" en packages.json ya que esta es una instrucción por defecto de NPM, sin embargo la coloco por causa de la referencia conceptual
 
 env.sh es el script shell de linux para definir nuestras variables de entorno
-en este caso las credenciales de AWS  hacen parte de nuestras variables de entorno y una vez definidas ejecutamos el script shell con el comando source <name_script>.sh
+en este caso las credenciales de AWS  hacen parte de nuestras variables de entorno y una vez definidas ejecutamos el script shell con el comando source <name_script>.sh y sh <name_script>.sh

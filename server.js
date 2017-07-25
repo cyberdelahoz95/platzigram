@@ -10,6 +10,7 @@ var expressSession = require('express-session');
 var port = process.env.PORT || 3000;
 var passport = require('passport');
 var platzigram = require('platzigram-client');
+var auth = require('./auth');
 
 var client = platzigram.createClient(config.client);
 
@@ -48,6 +49,10 @@ app.set('view engine','pug');
 
 app.use(express.static('public')); //this instrucion transforms public into a virtual folder, no need to set  path in views file source attributes, its enough just by typing the name of the file we want to look for , and express is going to find such file in every virtual folder we set by means of this instruction. in template engines files such as pug it is good tough to use the / symbol so to give the absolute path of the virtual public folder, this is a good practice because if the route is a extense route (for example www.example.com/1/2) files are not going to be found if we use relative path (for example www.example.com/1/app.js) instead if we use absolute path (f.e. www.example.com/app.js) there wont be any kind of problem.
 
+passport.use(auth.localStrategy);
+passport.deserializeUser(auth.deserializeUser);
+passport.serializeUser(auth.serializeUser);
+
 app.get('/', function(req,res){
 	res.render('index',{ 'title':'Welcome To PlatziGram' });
 	//res.send('hola mundo');
@@ -71,6 +76,19 @@ app.get('/signin', function(req,res){
 	res.render('index',{ 'title':'PlatziGram - Inicia Sesión' });
 	//res.send('hola mundo');
 });
+
+app.post('/login', passport.authenticate('local',{
+	successRedirect: '/',
+	failureRedirect:'/signin'
+}));
+
+function ensureAuth (req, res, next) {
+	if (req.isAuthenticated()) {
+		return next();
+	}
+
+	res.status(401).send({error: 'not authenticated'})
+}
 
 app.get('/api/pictures',function(req, res){
 	var pictures = [
@@ -104,7 +122,7 @@ setTimeout(function (){
 
 });
 
-app.post('/api/pictures',function (req,res){
+app.post('/api/pictures',ensureAuth,function (req,res){
 	upload(req,res, function(err)
 					{
 						if (err)
