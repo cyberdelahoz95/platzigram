@@ -13,19 +13,19 @@ var el = yo`<div class="container user-page">
 				<img src="${user.avatar}" class="responsive-img circle" />
 			</div>
 			<div class="col s12 m10 offset-m1 l6 left-align">
-				<h2 class="hide-on-large-only center-align">${user.username}</h2>
-				<h2 class="hide-on-med-and-down left-align">${user.username}</h2>				
+				<h2 class="hide-on-large-only center-align">${user.name}</h2>
+				<h2 class="hide-on-med-and-down left-align">${user.name}</h2>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 	${user.pictures.map(function(picture)
-		{	
+		{
 			return yo`<div class="col s12 m6 l4">
-				<a href="/${user.username}/${picture.id}" class="picture-container">
+				<a href="/${user.name}/${picture.id}" class="picture-container">
 					<img src="${picture.src}" class="picture" />
 					<div class="likes">
-						<i class="fa fa-heart">${picture.likes}</i>
+						<i class="fa fa-heart">${picture.likes || 0}</i>
 					</div>
 				</a>
 
@@ -35,7 +35,7 @@ var el = yo`<div class="container user-page">
     </div>
     <div class="modal-footer">
     	<div class="btn btn-flat likes">
-    		<i class="fa fa-heart"></i>${translate('likes',{ likes: picture.likes })}
+    		<i class="fa fa-heart"></i>${translate('likes',{ likes: picture.likes || 0 })}
     	</div>
     </div>
   </div>

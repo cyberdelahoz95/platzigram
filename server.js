@@ -115,35 +115,11 @@ app.get('/whoami', function(req, res){
 });
 
 app.get('/api/pictures',function(req, res){
-	var pictures = [
-		{
-			user:{
-				username:'slifszyc',
-				avatar:'https://materiell.com/wp-content/uploads/2015/03/john-full.png'
-			},
-			url:'office.jpg',
-			likes:10,
-			liked:false,
-			createdAt:	new Date().getTime()
-		},
-		{
-			user:{
-				username:'cyberdelahoz95',
-				avatar:'https://materiell.com/wp-content/uploads/2015/03/doug_full1.png'
-			},
-			url:'office.jpg',
-			likes:2,
-			liked:false,
-			createdAt: new Date().setDate(new Date().getDate()-10)
-		}
-	];
+	client.listPictures(function (err, pictures) {
+		if(err) return res.send([]);
 
-setTimeout(function (){
-	res.send(pictures);
-},2000);
-
-
-
+		res.send(pictures);
+	})
 });
 
 app.post('/api/pictures',ensureAuth,function (req,res){
@@ -153,34 +129,39 @@ app.post('/api/pictures',ensureAuth,function (req,res){
 						 {
 						 	return res.status(500).send(err);
 						 }
-						 return res.send('File uploaded');
+
+						 var user = req.user;
+						 var token = req.user.token;
+						 var username = req.user.username;
+						 var src = req.file.location; // estos atributos relacionados con el archivo a subir son inyectados por el moduleo multer s3
+
+						 console.log(user)
+
+						 client.savePicture({
+							 src: src,
+							  userId: username,
+							  user: {
+								username: username,
+								avatar: user.avatar,
+								name: user.name
+							  }
+						 }, token, function (err, img) {
+							 if(err) res.status(500).send(err);
+
+							 return res.send(`File uploaded: ${req.file.location}`);
+						 });
+
+
 					});
 });
 
 app.get('/api/user/:username', function(req,res){
-	const user =
-	 {
-	 	username: req.params.username,
-	 	avatar: 'http://www.luigix.com/wp-content/uploads/luigix_manga.jpg',
-	 	pictures : [
-				 	{
-						id:	1,
-						src: 'https://scontent.fbaq1-1.fna.fbcdn.net/v/t1.0-9/17523240_1364091930326001_7067621866624922243_n.png?oh=24a478a46103c1bf9beaf098ce3d977e&oe=5960A252',
-						likes:	3
-				 	},
-				 	{
-				 		id:2,
-				 		src: 'https://scontent.fbaq1-1.fna.fbcdn.net/v/t1.0-9/17098597_1337065839695277_7064680090356692852_n.png?oh=a8b3f17b423288cb7115a52efa1dbb44&oe=59697012',
-				 		likes:10
-				 	},
-					{
-				 		id:3,
-				 		src: 'https://scontent.fbaq1-1.fna.fbcdn.net/v/t1.0-9/16865165_1336190849782776_7602146400375590186_n.jpg?oh=e4f888b88d116bcd2ff742c8dbcfbad5&oe=5958E858',
-				 		likes:0
-				 	}
-	 	]
-	 };
-	 res.send(user);
+	var username = req.params.username;
+	client.getUser(username, function (err, user) {
+		if (err) return res.status(404).send({ error: 'user not found'})
+
+		res.send(user);
+	});
 });
 
 app.get('/:username',function (req,res)

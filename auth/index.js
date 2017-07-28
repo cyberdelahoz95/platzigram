@@ -18,7 +18,7 @@ exports.localStrategy = new localStrategy((username, password, done) => {
             if (err) {
                 return done(null, false, {message: `an error ocurred ${err.message}`})
             }
-
+            console.log(user)
             user.token = token;
             return done(null, user)
 
