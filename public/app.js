@@ -20709,7 +20709,9 @@ document.body.appendChild(el);
 },{"../translate":382,"yo-yo":366}],369:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<nav class="header">\n\t\t<div class="nav-wrapper">\n\t\t\t<div class="container">\n\t\t\t\t<div class="row">\n\t\t\t\t\t<div class="col s12 m6 offset-m1">\n\t\t\t\t\t\t<a href="/" class="brand-logo platzigram">PlatziGram</a>\n\t\t\t\t\t</div>\t\n\t\t\t\t\t<div class="col s2 m6 push-s10 push-m6">\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t<a href="#" class="btn right btn-large btn-flat btn-header-user dropdown-button" data-activates="drop-user">\n\t\t\t\t\t\t\t<i class="fa fa-user" aria-hidden="true"></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t\t<ul id="drop-user" class="dropdown-content">\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<a href="/">', '</a>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</nav>'], ['<nav class="header">\n\t\t<div class="nav-wrapper">\n\t\t\t<div class="container">\n\t\t\t\t<div class="row">\n\t\t\t\t\t<div class="col s12 m6 offset-m1">\n\t\t\t\t\t\t<a href="/" class="brand-logo platzigram">PlatziGram</a>\n\t\t\t\t\t</div>\t\n\t\t\t\t\t<div class="col s2 m6 push-s10 push-m6">\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t<a href="#" class="btn right btn-large btn-flat btn-header-user dropdown-button" data-activates="drop-user">\n\t\t\t\t\t\t\t<i class="fa fa-user" aria-hidden="true"></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t\t<ul id="drop-user" class="dropdown-content">\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<a href="/">', '</a>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</nav>']);
+var _templateObject = _taggedTemplateLiteral(['\n\t\t\t\t\t<div class="col s2 m6 push-s10 push-m6">\n\t\t\t\t\t\t<a href="#" class="btn right btn-large btn-flat btn-header-user dropdown-button" data-activates="drop-user">\n\t\t\t\t\t\t\t<i class="fa fa-user" aria-hidden="true"></i>\n\t\t\t\t\t\t\t', '\n\t\t\t\t\t\t</a>\n\t\t\t\t\t\t<ul id="drop-user" class="dropdown-content">\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<a href="/logout" rel="external">', '</a>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>'], ['\n\t\t\t\t\t<div class="col s2 m6 push-s10 push-m6">\n\t\t\t\t\t\t<a href="#" class="btn right btn-large btn-flat btn-header-user dropdown-button" data-activates="drop-user">\n\t\t\t\t\t\t\t<i class="fa fa-user" aria-hidden="true"></i>\n\t\t\t\t\t\t\t', '\n\t\t\t\t\t\t</a>\n\t\t\t\t\t\t<ul id="drop-user" class="dropdown-content">\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<a href="/logout" rel="external">', '</a>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>']),
+    _templateObject2 = _taggedTemplateLiteral(['\n\t<div class="col s2 offset-s9 m6 offset-m6 right-align">\n\t\t<a href="/signin" class="btn btn-large btn-flat">\n\t\t', '\n\t\t</a>\n\t</div>'], ['\n\t<div class="col s2 offset-s9 m6 offset-m6 right-align">\n\t\t<a href="/signin" class="btn btn-large btn-flat">\n\t\t', '\n\t\t</a>\n\t</div>']),
+    _templateObject3 = _taggedTemplateLiteral(['<nav class="header">\n\t\t<div class="nav-wrapper">\n\t\t\t<div class="container">\n\t\t\t\t<div class="row">\n\t\t\t\t\t<div class="col s12 m6 offset-m1">\n\t\t\t\t\t\t<a href="/" class="brand-logo platzigram">PlatziGram</a>\n\t\t\t\t\t</div>\n\t\t\t\t\t', '\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</nav>'], ['<nav class="header">\n\t\t<div class="nav-wrapper">\n\t\t\t<div class="container">\n\t\t\t\t<div class="row">\n\t\t\t\t\t<div class="col s12 m6 offset-m1">\n\t\t\t\t\t\t<a href="/" class="brand-logo platzigram">PlatziGram</a>\n\t\t\t\t\t</div>\n\t\t\t\t\t', '\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</nav>']);
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -20717,11 +20719,25 @@ var yo = require('yo-yo');
 var translate = require('../translate');
 var empty = require('empty-element');
 
-var el = yo(_templateObject, translate.message('logout'));
+var authCard = function authCard(ctx) {
+	var authenticated = yo(_templateObject, ctx.auth.name, translate.message('logout'));
+
+	var signin = yo(_templateObject2, translate.message('signin'));
+
+	if (ctx.auth) {
+		return authenticated;
+	} else {
+		return signin;
+	}
+};
+
+var renderHeader = function renderHeader(ctx) {
+	return yo(_templateObject3, authCard(ctx));
+};
 
 module.exports = function header(ctx, next) {
 	var container = document.getElementById('header-container');
-	empty(container).appendChild(el);
+	empty(container).appendChild(renderHeader(ctx));
 	next();
 };
 
@@ -20735,12 +20751,13 @@ var title = require('title');
 var header = require('../header');
 var Webcam = require('webcamjs');
 var pictureCard = require('../picture-card');
+var utils = require('../utils');
 
 /*HTTP Clients*/
 var request = require('superagent');
 var axios = require('axios');
 
-page('/', header, loading, asyncLoad, function (ctx, next) {
+page('/', utils.loadAuth, header, loading, asyncLoad, function (ctx, next) {
 	title('PlatziGram');
 	var main = document.getElementById('main-container');
 	empty(main).appendChild(template(ctx.pictures));
@@ -20872,7 +20889,7 @@ function asyncLoad(ctx, next) {
 	}, null, this, [[0, 7]]);
 }
 
-},{"../header":369,"../picture-card":375,"./template":371,"axios":1,"empty-element":324,"page":353,"superagent":357,"title":364,"webcamjs":365}],371:[function(require,module,exports){
+},{"../header":369,"../picture-card":375,"../utils":385,"./template":371,"axios":1,"empty-element":324,"page":353,"superagent":357,"title":364,"webcamjs":365}],371:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="container timeline">\n\n\n\n\n\n\t\t\t\t\t<div class="row ">\n\t\t\t\t\t\t<div class="col s12 m10 offset-m1 l6 offset-l3 center-align">\n\t\t\t\t\t\t\t<form id="formUpload" enctype="multipart/form-data" class="form-upload" onsubmit=', '>\n\t\t\t\t\t\t\t<a href="#modalcamara" class="waves-effect waves-light btn modal-trigger">\n\t\t\t\t\t\t\t\t<i class="fa fa-camera-retro"></i>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t<div id="fileName" class="fileUpload btn btn-flat cyan">\n\t\t\t\t\t\t\t\t\t<span><i class="fa fa fa-cloud-upload" aria-hidden="true"></i>\n  ', '</span>\n  \t\t\t\t\t\t\t\t\t<input name="picture" id="file" type="file" class="upload" onchange=', ' />\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<button id="btnUpload" type="submit" class="btn btn-flat cyan hide">', '</button>\n\t\t\t\t\t\t\t\t<button id="btnCancel" type="button" class="btn btn-flat red hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t<div class="col s12 m10 offset-m1 l6 offset-l3" id="picture-cards">\n\t\t\t\t\t\t\t', '\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t\t  <!-- Modal Structure -->\n\t\t\t\t\t\t  <div id="modalcamara" class="modal center-align">\n\t\t\t\t\t\t    <div class="modal-content">\n\t\t\t\t\t\t\t    <div class="camara-picture" id="camara-input"></div>\n\t\t\t\t\t\t\t    <div class="camara-picture hide" id="picture-preview"></div>\n\t\t\t\t\t\t    <div class="modal-footer">\n\t\t\t\t\t\t      <button class="webcambtns waves-effect waves-light btn" id="shoot">\n\t\t\t\t\t\t      \t\t<i class="fa fa-camera"></i>\n\t\t\t\t\t\t      </button>\n\t\t\t\t\t\t\t   <button class="webcambtns waves-effect waves-light btn cyan hide" id="uploadButton">\n\t\t\t\t\t\t      \t\t<i class="fa fa-cloud-upload"></i>\n\t\t\t\t\t\t      </button>\n\t\t\t\t\t\t\t   <button class="webcambtns waves-effect waves-light btn red hide" id="cancelPicture">\n\t\t\t\t\t\t      \t\t<i class="fa fa-times"></i>\n\t\t\t\t\t\t      </button>\t\t\t\t\t\t      \t\t\t\t\t\t      \n\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t  </div>\n\n\n\t\t\t\t</div>'], ['<div class="container timeline">\n\n\n\n\n\n\t\t\t\t\t<div class="row ">\n\t\t\t\t\t\t<div class="col s12 m10 offset-m1 l6 offset-l3 center-align">\n\t\t\t\t\t\t\t<form id="formUpload" enctype="multipart/form-data" class="form-upload" onsubmit=', '>\n\t\t\t\t\t\t\t<a href="#modalcamara" class="waves-effect waves-light btn modal-trigger">\n\t\t\t\t\t\t\t\t<i class="fa fa-camera-retro"></i>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t<div id="fileName" class="fileUpload btn btn-flat cyan">\n\t\t\t\t\t\t\t\t\t<span><i class="fa fa fa-cloud-upload" aria-hidden="true"></i>\n  ', '</span>\n  \t\t\t\t\t\t\t\t\t<input name="picture" id="file" type="file" class="upload" onchange=', ' />\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<button id="btnUpload" type="submit" class="btn btn-flat cyan hide">', '</button>\n\t\t\t\t\t\t\t\t<button id="btnCancel" type="button" class="btn btn-flat red hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t<div class="col s12 m10 offset-m1 l6 offset-l3" id="picture-cards">\n\t\t\t\t\t\t\t', '\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t\t  <!-- Modal Structure -->\n\t\t\t\t\t\t  <div id="modalcamara" class="modal center-align">\n\t\t\t\t\t\t    <div class="modal-content">\n\t\t\t\t\t\t\t    <div class="camara-picture" id="camara-input"></div>\n\t\t\t\t\t\t\t    <div class="camara-picture hide" id="picture-preview"></div>\n\t\t\t\t\t\t    <div class="modal-footer">\n\t\t\t\t\t\t      <button class="webcambtns waves-effect waves-light btn" id="shoot">\n\t\t\t\t\t\t      \t\t<i class="fa fa-camera"></i>\n\t\t\t\t\t\t      </button>\n\t\t\t\t\t\t\t   <button class="webcambtns waves-effect waves-light btn cyan hide" id="uploadButton">\n\t\t\t\t\t\t      \t\t<i class="fa fa-cloud-upload"></i>\n\t\t\t\t\t\t      </button>\n\t\t\t\t\t\t\t   <button class="webcambtns waves-effect waves-light btn red hide" id="cancelPicture">\n\t\t\t\t\t\t      \t\t<i class="fa fa-times"></i>\n\t\t\t\t\t\t      </button>\t\t\t\t\t\t      \t\t\t\t\t\t      \n\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t  </div>\n\n\n\t\t\t\t</div>']);
@@ -21021,7 +21038,7 @@ page('/signin', function (ctx, next) {
 },{"./template":377,"empty-element":324,"page":353,"title":364}],377:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<div class="col s12 m7">\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="signup-box">\n\t\t\t\t\t\t\t\t<h1 class="platzigram">PlatziGram</h1>\n\t\t\t\t\t\t\t\t<form action="/login" method="POST" class="signup-form">\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hiden-on-small-only">', '</a>\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-med-and-up"><i class="fa fa-facebook-official" aria-hidden="true">', '</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class="divider"></div>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="username" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="password" name="password" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<button class="btn waves-effect waves-light btn-signup" type="submit">', '</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="login-box">\n\t\t\t\t\t\t\t\t', ' <a href="/signup">', '</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>'], ['<div class="col s12 m7">\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="signup-box">\n\t\t\t\t\t\t\t\t<h1 class="platzigram">PlatziGram</h1>\n\t\t\t\t\t\t\t\t<form action="/login" method="POST" class="signup-form">\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hiden-on-small-only">', '</a>\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-med-and-up"><i class="fa fa-facebook-official" aria-hidden="true">', '</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class="divider"></div>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="username" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="password" name="password" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<button class="btn waves-effect waves-light btn-signup" type="submit">', '</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="login-box">\n\t\t\t\t\t\t\t\t', ' <a href="/signup">', '</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>']);
+var _templateObject = _taggedTemplateLiteral(['<div class="col s12 m7">\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="signup-box">\n\t\t\t\t\t\t\t\t<h1 class="platzigram">PlatziGram</h1>\n\t\t\t\t\t\t\t\t<form action="/login" method="POST" class="signup-form">\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<a href="/auth/facebook" rel="external" class="btn btn-fb hide-on-small-only">', '</a>\n\t\t\t\t\t\t\t\t\t\t<a href="/auth/facebook" rel="external" class="btn btn-fb hide-on-med-and-up"><i class="fa fa-facebook-official" aria-hidden="true">', '</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class="divider"></div>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="username" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="password" name="password" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<button class="btn waves-effect waves-light btn-signup" type="submit">', '</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="login-box">\n\t\t\t\t\t\t\t\t', ' <a href="/signup">', '</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>'], ['<div class="col s12 m7">\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="signup-box">\n\t\t\t\t\t\t\t\t<h1 class="platzigram">PlatziGram</h1>\n\t\t\t\t\t\t\t\t<form action="/login" method="POST" class="signup-form">\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<a href="/auth/facebook" rel="external" class="btn btn-fb hide-on-small-only">', '</a>\n\t\t\t\t\t\t\t\t\t\t<a href="/auth/facebook" rel="external" class="btn btn-fb hide-on-med-and-up"><i class="fa fa-facebook-official" aria-hidden="true">', '</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class="divider"></div>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="username" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="password" name="password" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<button class="btn waves-effect waves-light btn-signup" type="submit">', '</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="login-box">\n\t\t\t\t\t\t\t\t', ' <a href="/signup">', '</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>']);
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -21029,9 +21046,11 @@ var yo = require('yo-yo');
 var landing = require('../landing'); // landing is going to be the function that index.js return in module.exports of landing folder
 var translate = require('../translate');
 
-var signinform = yo(_templateObject, translate.message('signup.facebook'), translate.message('signup.text'), translate.message('username'), translate.message('password'), translate.message('signup.call-to-action'), translate.message('signin.not-have-account'), translate.message('signin'));
+var signinform = yo(_templateObject, translate.message('signup.facebook'), translate.message('signup.text'), translate.message('username'), translate.message('password'), translate.message('signin'), translate.message('signin.not-have-account'), translate.message('signup.call-to-action'));
 
 module.exports = landing(signinform);
+
+// links with attribute rel external are not handle by page js but allow the request to reach the server.
 
 },{"../landing":373,"../translate":382,"yo-yo":366}],378:[function(require,module,exports){
 'use strict';
@@ -21051,7 +21070,7 @@ page('/signup', function (ctx, next) {
 },{"./template":379,"empty-element":324,"page":353,"title":364}],379:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<div class="col s12 m7">\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="signup-box">\n\t\t\t\t\t\t\t\t<h1 class="platzigram">PlatziGram</h1>\n\t\t\t\t\t\t\t\t<form class="signup-form" action="/signup" method="POST">\n\t\t\t\t\t\t\t\t\t<h2>', '</h2>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hiden-on-small-only">', '</a>\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-med-and-up"><i class="fa fa-facebook-official" aria-hidden="true"></i>', '</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class="divider"></div>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<input type="email" name="email" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="name" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="username" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="password" name="password" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<button class="btn waves-effect waves-light btn-signup" type="submit">', '</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="login-box">\n\t\t\t\t\t\t\t\t', ' <a href="/signin">', '</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>'], ['<div class="col s12 m7">\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="signup-box">\n\t\t\t\t\t\t\t\t<h1 class="platzigram">PlatziGram</h1>\n\t\t\t\t\t\t\t\t<form class="signup-form" action="/signup" method="POST">\n\t\t\t\t\t\t\t\t\t<h2>', '</h2>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hiden-on-small-only">', '</a>\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-med-and-up"><i class="fa fa-facebook-official" aria-hidden="true"></i>', '</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class="divider"></div>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<input type="email" name="email" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="name" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="username" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="password" name="password" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<button class="btn waves-effect waves-light btn-signup" type="submit">', '</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="login-box">\n\t\t\t\t\t\t\t\t', ' <a href="/signin">', '</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>']);
+var _templateObject = _taggedTemplateLiteral(['<div class="col s12 m7">\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="signup-box">\n\t\t\t\t\t\t\t\t<h1 class="platzigram">PlatziGram</h1>\n\t\t\t\t\t\t\t\t<form class="signup-form" action="/signup" method="POST">\n\t\t\t\t\t\t\t\t\t<h2>', '</h2>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-small-only">', '</a>\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-med-and-up"><i class="fa fa-facebook-official" aria-hidden="true"></i>', '</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class="divider"></div>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<input type="email" name="email" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="name" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="username" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="password" name="password" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<button class="btn waves-effect waves-light btn-signup" type="submit">', '</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="login-box">\n\t\t\t\t\t\t\t\t', ' <a href="/signin">', '</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>'], ['<div class="col s12 m7">\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="signup-box">\n\t\t\t\t\t\t\t\t<h1 class="platzigram">PlatziGram</h1>\n\t\t\t\t\t\t\t\t<form class="signup-form" action="/signup" method="POST">\n\t\t\t\t\t\t\t\t\t<h2>', '</h2>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-small-only">', '</a>\n\t\t\t\t\t\t\t\t\t\t<a class="btn btn-fb hide-on-med-and-up"><i class="fa fa-facebook-official" aria-hidden="true"></i>', '</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class="divider"></div>\n\t\t\t\t\t\t\t\t\t<div class="section">\n\t\t\t\t\t\t\t\t\t\t<input type="email" name="email" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="name" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="text" name="username" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<input type="password" name="password" placeholder="', '" />\n\t\t\t\t\t\t\t\t\t\t<button class="btn waves-effect waves-light btn-signup" type="submit">', '</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="row">\n\t\t\t\t\t\t\t<div class="login-box">\n\t\t\t\t\t\t\t\t', ' <a href="/signin">', '</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>']);
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -21167,9 +21186,13 @@ var _template = require('./template');
 
 var _template2 = _interopRequireDefault(_template);
 
+var _utils = require('../utils');
+
+var _utils2 = _interopRequireDefault(_utils);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _page2.default)('/:username/:id', _header2.default, loadUser, function (ctx, next) {
+(0, _page2.default)('/:username/:id', loadUser, _utils2.default.loadAuth, _header2.default, function (ctx, next) {
 	var main = document.getElementById('main-container');
 	(0, _title2.default)('Platzigram -  ' + ctx.params.username);
 	(0, _emptyElement2.default)(main).appendChild((0, _template2.default)(ctx.user));
@@ -21181,7 +21204,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 	$('#modal' + ctx.params.id).modal('open');
 });
 
-(0, _page2.default)('/:username', _header2.default, loadUser, function (ctx, next) {
+(0, _page2.default)('/:username', loadUser, _utils2.default.loadAuth, _header2.default, function (ctx, next) {
 	var main = document.getElementById('main-container');
 	(0, _title2.default)('Platzigram -  ' + ctx.params.username);
 	(0, _emptyElement2.default)(main).appendChild((0, _template2.default)(ctx.user));
@@ -21219,7 +21242,7 @@ function loadUser(ctx, next) {
 	}, null, this, [[0, 7]]);
 }
 
-},{"../header":369,"./template":384,"empty-element":324,"page":353,"title":364}],384:[function(require,module,exports){
+},{"../header":369,"../utils":385,"./template":384,"empty-element":324,"page":353,"title":364}],384:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21254,4 +21277,47 @@ function userPageTemplate(user) {
 	return (0, _layout2.default)(el);
 };
 
-},{"../layout":374,"../translate":382,"yo-yo":366}]},{},[372]);
+},{"../layout":374,"../translate":382,"yo-yo":366}],385:[function(require,module,exports){
+'use strict';
+
+var axios = require('axios');
+
+function loadAuth(ctx, next) {
+    var whoami;
+    return regeneratorRuntime.async(function loadAuth$(_context) {
+        while (1) {
+            switch (_context.prev = _context.next) {
+                case 0:
+                    _context.prev = 0;
+                    _context.next = 3;
+                    return regeneratorRuntime.awrap(axios.get('/whoami').then(function (res) {
+                        return res.data;
+                    }));
+
+                case 3:
+                    whoami = _context.sent;
+                    // recuerda que axios trabaja resolviendo el request mediante una promesa 'then'
+                    if (whoami.username) {
+                        ctx.auth = whoami;
+                    } else {
+                        ctx.auth = false;
+                    }
+                    next();
+                    _context.next = 11;
+                    break;
+
+                case 8:
+                    _context.prev = 8;
+                    _context.t0 = _context['catch'](0);
+                    console.log(_context.t0);
+                case 11:
+                case 'end':
+                    return _context.stop();
+            }
+        }
+    }, null, this, [[0, 8]]);
+}
+
+exports.loadAuth = loadAuth;
+
+},{"axios":1}]},{},[372]);

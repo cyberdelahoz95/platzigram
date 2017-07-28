@@ -5,22 +5,23 @@ var title = require('title');
 var header = require('../header');
 var Webcam = require('webcamjs');
 var pictureCard = require('../picture-card');
+var utils = require('../utils');
 
 /*HTTP Clients*/
 var request = require('superagent');
 var axios = require('axios');
 
-page('/',header,loading,asyncLoad,function (ctx,next)
+page('/', utils.loadAuth, header, loading, asyncLoad, function (ctx,next)
 {
-	title('PlatziGram');	
+	title('PlatziGram');
 	var main = document.getElementById('main-container');
 	empty(main).appendChild(template(ctx.pictures));
 
 	const picturePreview = $('#picture-preview');
 	const camaraInput = $('#camara-input');
 	const cancelPicture = $('#cancelPicture');
-	const shootButton = $('#shoot');	
-	const uploadButton = $('#uploadButton');	
+	const shootButton = $('#shoot');
+	const uploadButton = $('#uploadButton');
 
 	function reset()
 	{
@@ -35,7 +36,7 @@ page('/',header,loading,asyncLoad,function (ctx,next)
 
 	$('.modal').modal(
 		{
-		ready: function(modal, trigger) 
+		ready: function(modal, trigger)
 				{ // Callback for Modal open. Modal and trigger parameters available.
 					Webcam.set({
 						width: 320,
@@ -75,9 +76,9 @@ page('/',header,loading,asyncLoad,function (ctx,next)
 
         			} );
         		},
-      	complete: function() 
-      			{ 
-      				Webcam.reset(); 
+      	complete: function()
+      			{
+      				Webcam.reset();
       				reset();
       			} // Callback for Modal close
     	}
@@ -108,7 +109,7 @@ function loadPicturesWithAxios (ctx,next)
 {
 	axios
 		.get('/api/pictures')
-		.then(function (res){			
+		.then(function (res){
 			ctx.pictures = res.data;
 			next();
 		})
@@ -135,7 +136,7 @@ fetch('/api/pictures')
 
 async function asyncLoad (ctx,next){
 	try	{
-		ctx.pictures = await fetch('/api/pictures').then(res => res.json());		 
+		ctx.pictures = await fetch('/api/pictures').then(res => res.json());
 	 	next();
 	}
 	catch (err){

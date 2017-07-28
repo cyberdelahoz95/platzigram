@@ -7,7 +7,7 @@ var config = require('./config');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressSession = require('express-session');
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 5050;
 var passport = require('passport');
 var platzigram = require('platzigram-client');
 var auth = require('./auth');
@@ -50,6 +50,7 @@ app.set('view engine','pug');
 app.use(express.static('public')); //this instrucion transforms public into a virtual folder, no need to set  path in views file source attributes, its enough just by typing the name of the file we want to look for , and express is going to find such file in every virtual folder we set by means of this instruction. in template engines files such as pug it is good tough to use the / symbol so to give the absolute path of the virtual public folder, this is a good practice because if the route is a extense route (for example www.example.com/1/2) files are not going to be found if we use relative path (for example www.example.com/1/app.js) instead if we use absolute path (f.e. www.example.com/app.js) there wont be any kind of problem.
 
 passport.use(auth.localStrategy);
+passport.use(auth.facebookStrategy);
 passport.deserializeUser(auth.deserializeUser);
 passport.serializeUser(auth.serializeUser);
 
@@ -82,6 +83,21 @@ app.post('/login', passport.authenticate('local',{
 	failureRedirect:'/signin'
 }));
 
+app.get('/logout', function(req,res){
+	req.logout();
+
+	res.redirect('/');
+});
+
+app.get('/auth/facebook', passport.authenticate('facebook',{
+	scope: 'email'
+}))
+
+app.get('/auth/facebook/callback', passport.authenticate('facebook',{
+	successRedirect: '/',
+	failureRedirect:'/signin'
+}))
+
 function ensureAuth (req, res, next) {
 	if (req.isAuthenticated()) {
 		return next();
@@ -89,6 +105,14 @@ function ensureAuth (req, res, next) {
 
 	res.status(401).send({error: 'not authenticated'})
 }
+
+app.get('/whoami', function(req, res){
+	if (req.isAuthenticated()) {
+		return res.json(req.user);
+	}
+
+	res.json({auth:false});
+});
 
 app.get('/api/pictures',function(req, res){
 	var pictures = [
